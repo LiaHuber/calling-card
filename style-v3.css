@@ -8,6 +8,17 @@ Body {
     font-family: "Syne-Regular", sans-serif;
 }
 
+p {
+    margin: 0px;
+    color:rgb(17, 255, 68);
+    font-size: 25px;
+    transition: color 0.5s ease;
+}
+
+p:hover {
+    color: blue;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -15,12 +26,12 @@ img {
 
 h1 {
     margin: 0px;
-    font-family: "Syne-Regular", sans-serif;
+    margin-top: 20px;
+    color:rgb(17, 255, 68);
+    font-family: "DotsAllForNowJL";
+    src: url("fonts/DotsAllForNowJL.woff2") format("woff2");
 }
 
-p {
-    margin: 0px;
-}
 
 
 .grid-container {
@@ -39,6 +50,8 @@ p {
 
 }
 
+/* NAME */
+
 .name {
     grid-area: name;
 }
@@ -48,29 +61,51 @@ p {
     font-size: 60px;
 }
 
+/* BIO */
+
 .bio {
     grid-area: bio;
     align-self: center;
+    margin-bottom: 20px;
 }
 
 .bio p {
     text-align: center;
-    color:rgb(0, 30, 255);
-    font-size: 15px;
+    color:rgb(17, 255, 68);
+    font-size: 25px;
     margin: 0;
 }
 
+/* IMAGES */
+
 .image-1 {
     grid-area: image-1;
+    transition: transform 0.5 ease;
+}
+
+.image-1:hover {
+    transform: scale(1.05);
 }
 
 .image-2 {
     grid-area: image-2;
+    transition: transform 0.5 ease;
+}
+
+.image-2:hover {
+    transform: scale(1.05);
 }
 
 .image-3 {
     grid-area: image-3;
+    transition: transform 0.5 ease;
 }
+
+.image-3:hover {
+    transform: scale(1.05);
+}
+
+/* TEXTS */
 
 .text-1 {
     grid-area: text-1;

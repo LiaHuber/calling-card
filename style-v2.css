@@ -8,6 +8,12 @@ Body {
     font-family: "Syne-Regular", sans-serif;
 }
 
+p {
+    margin: 0px;
+    color:rgb(17, 255, 68);
+    font-size: 25px;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -15,12 +21,12 @@ img {
 
 h1 {
     margin: 0px;
-    font-family: "Syne-Regular", sans-serif;
+    margin-top: 20px;
+    color:rgb(17, 255, 68);
+    font-family: "DotsAllForNowJL";
+    src: url("fonts/DotsAllForNowJL.woff2") format("woff2");
 }
 
-p {
-    margin: 0px;
-}
 
 
 .grid-container {
@@ -51,12 +57,13 @@ p {
 .bio {
     grid-area: bio;
     align-self: center;
+    margin-bottom: 20px;
 }
 
 .bio p {
     text-align: center;
-    color:rgb(0, 30, 255);
-    font-size: 15px;
+    color:rgb(17, 255, 68);
+    font-size: 25px;
     margin: 0;
 }
 
