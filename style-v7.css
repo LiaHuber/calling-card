@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "Syne-Regular";
+    src: url("fonts/Syne-Regular.woff2") format("woff2");
+}
+
+body {
+    background-color: black;
+    font-family: "Syne-Regular", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    margin: 0px;
+    font-family: "Syne-Regular", sans-serif;
+}
+
+p {
+    margin: 0px;
+}
+
+.grid-container {
+    display: grid;
+    padding: 40px 40px;
+    gap: 15px;
+    column-gap: 30px;
+    row-gap: 15px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas:
+    "name name name name name name name"
+    "bio bio bio bio bio bio bio"
+    ". p1-text p1-text p1-bilder p1-bilder p1-bilder p1-bilder"
+    ". . . . p1-zoom p1-zoom ."
+    "p2-bilder p2-bilder p2-bilder p2-bilder p2-text p2-text ."
+    ". . . . p2-zoom p2-zoom ."
+    ". p3-text p3-text p3-bilder p3-bilder p3-bilder p3-bilder"
+    ". . . . p3-zoom p3-zoom .";
+}
+
+.name {
+    grid-area: name;
+}
+
+.name h1 {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+
+.bio {
+    grid-area: bio;
+    align-self: center;
+}
+
+.bio p {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* p1 */
+
+.p1-bilder {
+    grid-area: p1-bilder;
+}
+
+.p1-text {
+    grid-area: p1-text;
+    align-self: center;
+    text-align: center;
+    color: white;
+}
+
+.p1-zoom {
+    grid-area: p1-zoom;
+    color:white;
+}
+
+/* p2 */
+
+.p2-bilder {
+    grid-area: p2-bilder;
+}
+
+.p2-text {
+    grid-area: p2-text;
+    align-self: center;
+    text-align: center;
+    color: white;
+}
+
+.p2-zoom {
+    grid-area: p2-zoom;
+    color:white;
+}
+
+/* p3 */
+
+.p3-bilder {
+    grid-area: p3-bilder;
+}
+
+.p3-text {
+    grid-area: p3-text;
+    align-self: center;
+    text-align: center;
+    color: white;
+}
+
+.p3-zoom {
+    grid-area: p3-zoom;
+    color:white;
+}
+
