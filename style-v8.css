@@ -23,13 +23,9 @@ img {
     height: auto;
 }
 
-h1 {
-    margin: 0px;
-    font-family: "Syne-Regular", sans-serif;
-}
-
-p {
-    margin: 0px;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .grid-container {
@@ -40,7 +36,8 @@ p {
     row-gap: 15px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-areas:
-    "bio bio name name name projektaufzählung projektaufzählung"
+    "name name name name name name name"
+    "bio bio bio bio bio bio bio"
     ". p1-text p1-text p1-bilder p1-bilder p1-bilder p1-bilder"
     ". . . p1-bilder p1-bilder p1-bilder p1-bilder"
     ". . . . p1-zoom p1-zoom ."
@@ -54,7 +51,6 @@ p {
 
 .name {
     grid-area: name;
-    align-self: center;
 }
 
 .name h1 {
@@ -72,22 +68,8 @@ p {
 .bio p {
     text-align: center;
     color: white;
-    font-size: 20px;
-    margin-bottom: 60px;
-    font-family: "Avara-Bold";
-}
-
-.projektaufzählung {
-    grid-area: projektaufzählung;
-    align-self: center;
-}
-
-.projektaufzählung p {
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    margin-bottom: 60px;
-    font-family: "Avara-Bold";
+    font-size: 15px;
+    margin: 0;
 }
 
 /* p1 */

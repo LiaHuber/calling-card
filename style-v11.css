@@ -32,6 +32,25 @@ p {
     margin: 0px;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+    color: rgb(252, 252, 71);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.p1-bilder,
+.p2-bilder,
+.p3-bilder {
+  scroll-margin-top: 50px;
+}
+
 .grid-container {
     display: grid;
     padding: 40px 40px;
@@ -40,7 +59,7 @@ p {
     row-gap: 15px;
     grid-template-columns: repeat(7, 1fr);
     grid-template-areas:
-    "bio bio name name name projektaufzählung projektaufzählung"
+    "bioklein bioklein nameklein nameklein nameklein projektaufzählung projektaufzählung"
     ". p1-text p1-text p1-bilder p1-bilder p1-bilder p1-bilder"
     ". . . p1-bilder p1-bilder p1-bilder p1-bilder"
     ". . . . p1-zoom p1-zoom ."
@@ -52,42 +71,44 @@ p {
     ". . . . p3-zoom p3-zoom .";
 }
 
-.name {
-    grid-area: name;
-    align-self: center;
+.nameklein {
+    grid-area: nameklein;
 }
 
-.name h1 {
-    text-align: center;
-    font-size: 80px;
-    color: white;
-   font-family: "Avara-Bold";
-}
-
-.bio {
-    grid-area: bio;
-    align-self: center;
-}
-
-.bio p {
+.nameklein p {
     text-align: center;
     color: white;
-    font-size: 20px;
     margin-bottom: 60px;
-    font-family: "Avara-Bold";
+}
+
+.nameklein a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nameklein a:hover {
+    color: rgb(252, 252, 71);
+}
+
+.bioklein {
+    grid-area: bioklein;
+}
+
+.bioklein p {
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
 }
 
 .projektaufzählung {
     grid-area: projektaufzählung;
-    align-self: center;
 }
 
 .projektaufzählung p {
     text-align: center;
     color: white;
-    font-size: 20px;
     margin-bottom: 60px;
-    font-family: "Avara-Bold";
 }
 
 /* p1 */
@@ -98,7 +119,7 @@ p {
 
 .p1-text {
     grid-area: p1-text;
-    align-self: center;
+    /* align-self: center; */
     text-align: right;
     color: white;
     margin-left: 50px;
@@ -116,6 +137,15 @@ p {
     font-family: "hkgrotesk_regular", sans-serif;
     font-size: 20px;
 }
+
+.p1-zoom :hover {
+    color: rgb(252, 252, 71);
+
+}
+.p1-zoom-2x {
+    color: rgb(252, 252, 71);
+}
+
 
 .p1-zoom-05x,
 .p1-zoom-1x,
@@ -137,7 +167,7 @@ p {
 
 .p2-text {
     grid-area: p2-text;
-    align-self: center;
+    /* align-self: center; */
     text-align: left;
     color: white;
     margin-right: 50px;
@@ -155,6 +185,10 @@ p {
     font-family: "hkgrotesk_regular", sans-serif;
     font-size: 20px;
 }
+.p2-zoom :hover {
+    color: rgb(252, 252, 71);
+}
+
 
 .p2-zoom-05x,
 .p2-zoom-1x,
@@ -167,6 +201,7 @@ p {
     align-items: center;        /* vertical center */
     justify-content: center;    /* horizontal center */
 }
+
 
 /* p3 */
 
@@ -195,6 +230,10 @@ p {
     font-size: 20px;
 }
 
+.p3-zoom :hover {
+    color: rgb(252, 252, 71);
+}
+
 .p3-zoom-1x,
 .p3-zoom-2x {
     background-color: rgb(112, 112, 112);
@@ -206,3 +245,85 @@ p {
     justify-content: center;    /* horizontal center */
 }
 
+
+
+/* ANIMATION ZOOM P1 */
+
+/* Default: only 2x visible */
+.p1-05x {
+  display: none;
+}
+.p1-1x {
+  display: none;
+}
+.p1-2x {
+  display: block;
+}
+
+/* Hover 0.5x → show 0.5x, hide 2x */
+.p1-zoom:has(.p1-zoom-05x:hover) ~ .p1-bilder .p1-05x {
+  display: block;
+}
+.p1-zoom:has(.p1-zoom-05x:hover) ~ .p1-bilder .p1-2x {
+  display: none;
+}
+ 
+/* Hover 1x → show 1x, hide 2x */
+.p1-zoom:has(.p1-zoom-1x:hover) ~ .p1-bilder .p1-1x {
+  display: block;
+}
+.p1-zoom:has(.p1-zoom-1x:hover) ~ .p1-bilder .p1-2x {
+  display: none;
+}
+
+
+
+/* ANIMATION ZOOM P2 */
+
+/* Default: only 2x visible */
+.p2-05x {
+  display: none;
+}
+.p2-1x {
+  display: none;
+}
+.p2-2x {
+  display: block;
+}
+
+/* Hover 0.5x → show 0.5x, hide 2x */
+.p2-zoom:has(.p2-zoom-05x:hover) ~ .p2-bilder .p2-05x {
+  display: block;
+}
+.p2-zoom:has(.p2-zoom-05x:hover) ~ .p2-bilder .p2-2x {
+  display: none;
+}
+ 
+/* Hover 1x → show 1x, hide 2x */
+.p2-zoom:has(.p2-zoom-1x:hover) ~ .p2-bilder .p2-1x {
+  display: block;
+}
+.p2-zoom:has(.p2-zoom-1x:hover) ~ .p2-bilder .p2-2x {
+  display: none;
+}
+
+
+
+/* ANIMATION ZOOM P3 */
+
+/* Default: only 2x visible */
+
+.p3-1x {
+  display: none;
+}
+.p3-2x {
+  display: block;
+}
+ 
+/* Hover 1x → show 1x, hide 2x */
+.p3-zoom:has(.p3-zoom-1x:hover) ~ .p3-bilder .p3-1x {
+  display: block;
+}
+.p3-zoom:has(.p3-zoom-1x:hover) ~ .p3-bilder .p3-2x {
+  display: none;
+}
